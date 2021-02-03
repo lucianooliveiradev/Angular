@@ -1,10 +1,10 @@
-<div style="margin: 10px; font-size: 20px;">
-  <h1>Editar tarefa</h1>
+<div style="margin: 75px 10px 0px 10px;">
+  <h1 style="font-size: 30px;">Editar tarefa</h1>
 
 <div class="well">
   <form #formTarefa="ngForm">
-    <div class="form-group">
-      <label for="nome">Tarefa:</label>
+    <div class="form-group" style="font-weight: normal;font-size: 20px;">
+      <label for="nome" style="font-weight: normal;">Nome da tarefa:</label>
       <input
         type="text"
         class="form-control"
@@ -19,7 +19,7 @@
         <div [hidden]="!nome.errors.required">
           Digite a tarefa.
         </div>
-        <div [hidden]="!nome.errors.minlength">
+        <div [hidden]="!nome.errors.minlength" style="text-align: center;font-size: 20px;">
           A tarefa deve conter ao menos 5 caracteres.
         </div>
       </div>
@@ -31,7 +31,7 @@
         (click)="atualizar()"
         value="Atualizar"
         [disabled]="!formTarefa.form.valid">
-      <a [routerLink]="['/tarefas']"
+      <a [routerLink]="['/listar-tarefas']"
         class="btn btn-danger" style="margin-left: 5px;">
         <span class="glyphicon glyphicon-chevron-left"
           aria-hidden="true"></span> Cancelar
